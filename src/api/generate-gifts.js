@@ -1,13 +1,14 @@
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
+  organization: "org-fCXKKyY2tUNtn8r9UEtPFXit",
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
   const { priceMin, priceMax, gender, age, hobbies } = req.body;
-  
+
   const completion = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: generatePrompt(priceMin, priceMax, gender, age, hobbies),

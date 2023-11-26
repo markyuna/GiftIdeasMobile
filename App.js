@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>OpenAI GiftsIdeas</Text>
+      <Text style={styles.text}>Christmas gift generator</Text>
       <Image
         style={{ width: 100, height: 100 }}
         source={{
@@ -18,8 +18,8 @@ export default function App() {
       />
       <Gifts />
     </View>
-      
-    
+
+
   );
 }
 
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
+    marginTop: -105,
     fontSize : 30,
   },
- 
+
 });
